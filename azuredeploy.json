@@ -139,7 +139,7 @@
         },
         "reportSasToken": {
             "type": "string",
-            "value": "[listAccountSas(variables('storageAccountName'), '2019-02-02', variables('accountSasProperties')).accountSasToken]"
+            "value": "[listAccountSas(variables('storageAccountName'), '2019-06-01', variables('accountSasProperties')).accountSasToken]"
         }
     }
 }
