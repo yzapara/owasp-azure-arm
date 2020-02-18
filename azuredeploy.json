@@ -33,7 +33,7 @@
         "cmdDirMakeOutput": "mkdir output",
         "cmdDirSymlinkWrk": "ln -s output wrk",
         "cmdZapScan": "[concat('/zap/zap-baseline.py -t ', parameters('target'), ' -d -m ', parameters('spiderTime'), ' -x ', variables('reportName'))]",
-        "cmdWgetPutReport": "[concat('wget --method=PUT --header=\"x-ms-blob-type: BlockBlob\" --body-file=output/', variables('reportName'), ' \"https://', variables('storageAccountName'),'.blob.core.windows.net/', variables('blobContainerName'), '/', variables('reportName'), '?')]",
+        "cmdWgetPutReport": "[concat('wget -N --method=PUT --header=\"x-ms-blob-type: BlockBlob\" --body-file=output/', variables('reportName'), ' \"https://', variables('storageAccountName'),'.blob.core.windows.net/', variables('blobContainerName'), '/', variables('reportName'), '?')]",
         "accountSasProperties": {
             "signedServices": "bfqt",
             "signedPermission": "rwdlacup",
